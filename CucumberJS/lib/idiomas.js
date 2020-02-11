@@ -8,6 +8,11 @@ const idiomas = {
     MSG1: "Good morning!",
     MSG2: "Good afternoon!",
     MSG3: "Good night!"
+  },
+  FR: {
+    MSG1: "Bonjour!",
+    MSG2: "Bonsoir!",
+    MSG3: "Bonne nuit!"
   }
 };
 

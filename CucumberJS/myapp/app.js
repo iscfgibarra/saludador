@@ -16,11 +16,12 @@ app.get("/saludar", function(req, res) {
   let idioma = req.query["lang"];
 
   let times = hora.split(":");
-  console.log(times);
+  let h = Number.parseInt(times[0]);
+  let m = Number.parseInt(times[1]);
 
   let mesenger;
-  mesenger = new Messenger("ES");
-  var message = mesenger.getMessage(new Date(2020, 02, 11));
+  mesenger = new Messenger(idioma);
+  var message = mesenger.getMessage(new Date(2020, 02, 11, h, m));
   res.render(path.join(__dirname + "/views/saludar"), { message: message });
 });
 
