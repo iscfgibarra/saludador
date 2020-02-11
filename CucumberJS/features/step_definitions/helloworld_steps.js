@@ -9,38 +9,20 @@ const screen = {
 };
 let driver;
 
-Given("i go to hello world app", function() {
+Given("i go to hello world app", { timeout: 3 * 5000},async function() {
   // Write code here that turns the phrase above into concrete actions
   driver = new Builder()
     .forBrowser("chrome")
     .setChromeOptions(new chrome.Options().windowSize(screen))
     .build();
 
-  driver
-    .get("http://localhost:3000/")
-    .then(function() {
-      console.log(arguments);
-    })
-    .catch(function() {
-      console.log(arguments);
-    });
+    await driver.get('http://localhost:3000/');
 });
 
 Then("should see {string}", async function(string) {
   // Write code here that turns the phrase above into concrete actions
-  driver
-    .wait(until.elementLocated(By.tagName("h1")), 10000)
-    .then(function(elm) {
-      let text = elm.getText();
-      assert.equal(text, string);
-      driver.close();
-    })
-    .catch(function(ex) {
-      callback(false);
-    });
-
-  // let text = await driver.findElement(By.tagName("h1")).getText();
-  // assert.equal(text, string);
-  // driver.close();
+  let text = await driver.findElement(By.tagName("body")).getText();
+  assert.equal(text, string);
+  driver.close();
   //driver.quit();
 });
