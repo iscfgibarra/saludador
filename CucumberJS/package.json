@@ -21,7 +21,8 @@
   "scripts": {
     "test": "node_modules\\.bin\\cucumber-js && mocha",
     "cucumber": "node_modules\\.bin\\cucumber-js",
-    "mocha": "mocha"
+    "mocha": "mocha",
+    "start": "node myapp/app.js"
   },
   "author": "",
   "license": "ISC"
