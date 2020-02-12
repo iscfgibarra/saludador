@@ -9,7 +9,7 @@ const screen = {
 };
 let driver;
 
-Given("i go to hello world app", { timeout: 3 * 5000},async function() {
+Given("i go to Saludo ES", { timeout: 3 * 5000},async function() {
   // Write code here that turns the phrase above into concrete actions
   driver = new Builder()
     .forBrowser("chrome")
@@ -19,6 +19,11 @@ Given("i go to hello world app", { timeout: 3 * 5000},async function() {
     await driver.get('http://localhost:3000/');
 });
 
+
+When('language is set to ES and time is between 00:00 and 11:59', function () {
+    Messenger.getMessage(new Date(2020, 2, 12, 0, 0, 0, 0));
+});
+
 Then("should see {string}", async function(string) {
   // Write code here that turns the phrase above into concrete actions
   let text = await driver.findElement(By.tagName("body")).getText();
@@ -26,4 +31,3 @@ Then("should see {string}", async function(string) {
   driver.close();
   //driver.quit();
 });
-
