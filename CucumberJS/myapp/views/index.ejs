@@ -54,20 +54,14 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="form-container">
-      <form class="saludo-form" action="/saludar" method="GET">
-        <input class="time-input" id="hora" name="hora" type="time" />
-
-        <select class="idioma-select" id="lang" name="lang">
-          <option value="ES" selected>Español</option>
-          <option value="EN">Ingles</option>
-          <option value="FR">Frances</option>
-        </select>
-
-        <button class="submit-button" id="saludar" type="submit">
-          Saludar
-        </button>
-      </form>
-    </div>
+    <form action="/saludar" method="GET">
+      <input id="hora" name="hora" type="text" pattern="[0-9]{2}:[0-9]{2}" required/>
+      <select id="lang" name="lang">
+        <option value="ES" selected>Español</option>
+        <option value="EN">Ingles</option>
+        <option value="FR">Frances</option>
+      </select>
+      <button id="saludar" type="submit">Saludar</button>
+    </form>
   </body>
 </html>
