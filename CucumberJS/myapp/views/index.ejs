@@ -4,17 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <style>
+      body {
+        display: grid;
+        grid-template-areas:
+          ". . ."
+          ". saludator ."
+          ". . .";
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: center;
+        justify-items: center;
+        height: 100vh;
+      }
+
+      .form-container {
+        grid-area: saludator;
+      }
+
+      .saludo-form {
+        grid-area: saludator;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+          "time"
+          "idioma" "boton";
+        grid-row-gap: 5px;
+        font-size: 24px;
+      }
+
+      .time-input {
+        grid-area: time;
+        font-size: 64px;
+        font-weight: bolder;
+      }
+
+      .idioma-select {
+        grid-area: idioma;
+        font-size: 48px;
+      }
+
+      .submit-button {
+        font-size: 36px;
+      }
+    </style>
+
     <title>Document</title>
   </head>
   <body>
-    <form action="/saludar" method="GET">
-      <input id="hora" name="hora" type="time" />
-      <select id="lang" name="lang">
-        <option value="ES" selected>Español</option>
-        <option value="EN">Ingles</option>
-        <option value="FR">Frances</option>
-      </select>
-      <button id="saludar" type="submit">Saludar</button>
-    </form>
+    <div class="form-container">
+      <form class="saludo-form" action="/saludar" method="GET">
+        <input class="time-input" id="hora" name="hora" type="time" />
+
+        <select class="idioma-select" id="lang" name="lang">
+          <option value="ES" selected>Español</option>
+          <option value="EN">Ingles</option>
+          <option value="FR">Frances</option>
+        </select>
+
+        <button class="submit-button" id="saludar" type="submit">
+          Saludar
+        </button>
+      </form>
+    </div>
   </body>
 </html>
