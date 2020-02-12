@@ -17,3 +17,16 @@
 [0211/164635.171:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
 [0211/164635.171:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
 [0211/164635.173:ERROR:exception_snapshot_win.cc(98)] thread ID 20048 not found in process
+[0212/102954.791:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[0212/102954.793:ERROR:exception_snapshot_win.cc(98)] thread ID 24732 not found in process
+[0212/102954.804:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[0212/102954.804:ERROR:exception_snapshot_win.cc(98)] thread ID 11068 not found in process
+[0212/102954.806:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[0212/102954.807:ERROR:exception_snapshot_win.cc(98)] thread ID 5380 not found in process
+[0212/102954.826:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[0212/102954.826:ERROR:exception_snapshot_win.cc(98)] thread ID 23408 not found in process
+[0212/102954.832:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[0212/102954.832:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
+[0212/102954.832:ERROR:exception_snapshot_win.cc(98)] thread ID 25624 not found in process
+[0212/102954.832:ERROR:exception_snapshot_win.cc(98)] thread ID 6264 not found in process
+[0212/103013.854:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
