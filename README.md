@@ -1,5 +1,7 @@
 # CSDCourseTemplate
 
+![Node.js CI](https://github.com/iscfgibarra/saludador/workflows/Node.js%20CI/badge.svg)
+
 Template for CSD course
 
 Dependencies
