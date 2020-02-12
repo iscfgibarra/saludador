@@ -8,7 +8,7 @@
   </head>
   <body>
     <form action="/saludar" method="GET">
-      <input id="hora" name="hora" type="time" />
+      <input id="hora" name="hora" type="text" pattern="[0-9]{2}:[0-9]{2}" required/>
       <select id="lang" name="lang">
         <option value="ES" selected>Español</option>
         <option value="EN">Ingles</option>
