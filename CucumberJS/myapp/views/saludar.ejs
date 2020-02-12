@@ -4,10 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      body {
+        display: grid;
+        grid-template-areas:
+          ". . ."
+          ". saludator ."
+          ". . .";
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: center;
+        justify-items: center;
+        height: 100vh;
+      }
 
+      .form-container {
+        grid-area: saludator;
+      }
+
+      .saludo {
+      }
+    </style>
     <title>Document</title>
   </head>
   <body>
-    <h1 class="saludo"><%=message%></h1>
+    <div class="form-container">
+      <h1 class="saludo"><%=message%></h1>
+    </div>
   </body>
 </html>
