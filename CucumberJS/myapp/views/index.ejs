@@ -39,6 +39,7 @@
         grid-area: time;
         font-size: 64px;
         font-weight: bolder;
+        color: blue;
       }
 
       .idioma-select {
@@ -54,14 +55,26 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="/saludar" method="GET">
-      <input id="hora" name="hora" type="text" pattern="[0-9]{2}:[0-9]{2}" required/>
-      <select id="lang" name="lang">
-        <option value="ES" selected>Español</option>
-        <option value="EN">Ingles</option>
-        <option value="FR">Frances</option>
-      </select>
-      <button id="saludar" type="submit">Saludar</button>
-    </form>
+    <div class="form-container">
+      <form action="/saludar" method="GET" class="saludo-form">
+        <input
+          class="time-input"
+          id="hora"
+          name="hora"
+          type="text"
+          pattern="[0-9]{2}:[0-9]{2}"
+          placeholder="00:00 (24H)"
+          required
+        />
+        <select id="lang" name="lang" class="idioma-select">
+          <option value="ES" selected>Español</option>
+          <option value="EN">Ingles</option>
+          <option value="FR">Frances</option>
+        </select>
+        <button id="saludar" class="submit-button" type="submit">
+          Saludar
+        </button>
+      </form>
+    </div>
   </body>
 </html>
