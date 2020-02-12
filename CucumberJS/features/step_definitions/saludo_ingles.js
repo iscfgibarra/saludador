@@ -12,8 +12,6 @@ let driver;
 
 Given("I open the webapp Saludador at {string}, select language {string} and click button Saludar", { timeout: 3 * 5000},async function(hora, lang) {
     // Write code here that turns the phrase above into concrete actions
-    // console.log("showing table");
-    // console.log(table.rows());
     driver = new Builder()
       .forBrowser("chrome")
       .setChromeOptions(new chrome.Options().windowSize(screen))
@@ -34,6 +32,6 @@ Given("I open the webapp Saludador at {string}, select language {string} and cli
     let text = await driver.findElement(By.tagName("body")).getText();
     assert.equal(text, string);
     driver.close();
-    driver.quit();
+    //driver.quit();
   });
   
