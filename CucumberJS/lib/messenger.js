@@ -5,22 +5,25 @@ class Messenger {
     this.lang = idiomas[lang];
   }
 
-  getMessage(fechaHora) {
-    if (fechaHora === undefined) {
-      return "Hello World!";
-    }
-
+  getMessage(horas, minutos) {
     try {
-      let hora = fechaHora.getHours();
+      if (horas > 24) {
+        throw "Hora Invalida";
+      }
 
-      if (hora >= 0 && hora < 12) {
+      if (minutos > 59) {
+        throw "Hora Invalida";
+      }
+
+      if (horas >= 0 && horas < 12) {
         return this.lang["MSG1"];
-      } else if (hora >= 12 && hora < 18) {
+      } else if (horas >= 12 && horas < 18) {
         return this.lang["MSG2"];
       } else {
         return this.lang["MSG3"];
       }
     } catch (error) {
+      console.log(error);
       throw "Fecha Invalida";
     }
   }

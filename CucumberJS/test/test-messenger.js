@@ -8,7 +8,7 @@ describe("Messenger Español", function() {
       let mesenger;
       mesenger = new Messenger("ES");
       //Act
-      let message = mesenger.getMessage(new Date(2020, 02, 11, 0, 0, 0));
+      let message = mesenger.getMessage(0, 0);
       //Assert
       expect(message).to.equal("¡Buenos dias!");
       done();
@@ -21,7 +21,7 @@ describe("Messenger Español", function() {
       let mesenger;
       mesenger = new Messenger("ES");
       //Act
-      let message = mesenger.getMessage(new Date(2020, 02, 11, 11, 59, 59));
+      let message = mesenger.getMessage(11, 59);
       //Assert
       expect(message).to.equal("¡Buenos dias!");
       done();
@@ -34,7 +34,7 @@ describe("Messenger Español", function() {
       let mesenger;
       mesenger = new Messenger("ES");
       //Act
-      let message = mesenger.getMessage(new Date(2020, 02, 11, 12, 0, 0));
+      let message = mesenger.getMessage(12, 0);
       //Assert
       expect(message).to.equal("¡Buenas tardes!");
       done();
@@ -47,7 +47,7 @@ describe("Messenger Español", function() {
       let mesenger;
       mesenger = new Messenger("ES");
       //Act
-      let message = mesenger.getMessage(new Date(2020, 02, 11, 17, 59, 59));
+      let message = mesenger.getMessage(17, 59);
       //Assert
       expect(message).to.equal("¡Buenas tardes!");
       done();
@@ -60,7 +60,7 @@ describe("Messenger Español", function() {
       let mesenger;
       mesenger = new Messenger("ES");
       //Act
-      let message = mesenger.getMessage(new Date(2020, 02, 11, 18, 0, 0));
+      let message = mesenger.getMessage(18, 0);
       //Assert
       expect(message).to.equal("¡Buenas noches!");
       done();
@@ -73,7 +73,7 @@ describe("Messenger Español", function() {
       let mesenger;
       mesenger = new Messenger("ES");
       //Act
-      let message = mesenger.getMessage(new Date(2020, 02, 11, 23, 59, 59));
+      let message = mesenger.getMessage(23, 59);
       //Assert
       expect(message).to.equal("¡Buenas noches!");
       done();
@@ -89,7 +89,7 @@ describe("Messenger Español", function() {
 
       expect(function() {
         mesenger.getMessage("asdsads");
-      }).to.throw("Fecha Invalida");
+      }).to.throw("Hora Invalida");
       done();
     });
   });

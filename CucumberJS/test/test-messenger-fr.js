@@ -14,7 +14,7 @@ describe("Messenger Frances", function() {
       let mesenger;
       mesenger = new Messenger("FR");
       //Act
-      let message = mesenger.getMessage(new Date(2020, 02, 11, 0, 0, 0));
+      let message = mesenger.getMessage(0, 0);
       //Assert
       expect(message).to.equal("Bonjour!");
       done();
@@ -27,7 +27,7 @@ describe("Messenger Frances", function() {
       let mesenger;
       mesenger = new Messenger("FR");
       //Act
-      let message = mesenger.getMessage(new Date(2020, 02, 11, 11, 59, 59));
+      let message = mesenger.getMessage(11, 59);
       //Assert
       expect(message).to.equal("Bonjour!");
       done();
@@ -40,7 +40,7 @@ describe("Messenger Frances", function() {
       let mesenger;
       mesenger = new Messenger("FR");
       //Act
-      let message = mesenger.getMessage(new Date(2020, 02, 11, 12, 0, 0));
+      let message = mesenger.getMessage(12, 0);
       //Assert
       expect(message).to.equal("Bonsoir!");
       done();
@@ -53,7 +53,7 @@ describe("Messenger Frances", function() {
       let mesenger;
       mesenger = new Messenger("FR");
       //Act
-      let message = mesenger.getMessage(new Date(2020, 02, 11, 17, 59, 59));
+      let message = mesenger.getMessage( 17, 59);
       //Assert
       expect(message).to.equal("Bonsoir!");
       done();
@@ -66,7 +66,7 @@ describe("Messenger Frances", function() {
       let mesenger;
       mesenger = new Messenger("FR");
       //Act
-      let message = mesenger.getMessage(new Date(2020, 02, 11, 18, 0, 0));
+      let message = mesenger.getMessage(18, 0);
       //Assert
       expect(message).to.equal("Bonne nuit!");
       done();
@@ -79,7 +79,7 @@ describe("Messenger Frances", function() {
       let mesenger;
       mesenger = new Messenger("FR");
       //Act
-      let message = mesenger.getMessage(new Date(2020, 02, 11, 23, 59, 59));
+      let message = mesenger.getMessage(23, 59);
       //Assert
       expect(message).to.equal("Bonne nuit!");
       done();
